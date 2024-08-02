@@ -12,21 +12,21 @@ const ChatWindow = ({ messages, onOptionClick }) => {
     }, [messages]);
 
     return (
-        <div className="flex-1 overflow-auto p-4 bg-gray-100 h-96 w-full max-w-2xl">
+        <div className="flex-1 overflow-auto p-4 bg-gray-100 h-[80vh] w-full max-w-2xl rounded-sm">
             <div className="flex flex-col">
                 {messages.map((message) => (
                     <div
                         key={message.id}
-                        className={`flex mb-2 ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
+                        className={`flex mb-2 ${message.sender === 'user' ? 'justify-end' : 'justify-start'} md:mb-4`}
                     >
                         {message.sender === 'system' && (
-                            <Avatar className="mr-2">
+                            <Avatar className="mr-2 hidden md:block">
                                 <AvatarImage src={nucleus} alt="System Avatar" />
                                 <AvatarFallback>SA</AvatarFallback>
                             </Avatar>
                         )}
                         <div className={`flex flex-col ${message.sender === 'user' ? 'items-end text-right' : 'items-start text-left'}`}>
-                            <div className={`relative max-w-xs ${message.sender === 'system' ? 'bg-blue-100' : 'bg-green-100'} p-2 rounded-lg`}>
+                            <div className={`relative max-w-xs ${message.sender === 'system' ? 'bg-blue-100' : 'bg-green-100'} p-2 rounded-lg shadow-md`}>
                                 <ReactMarkdown className="whitespace-pre-wrap">{message.text}</ReactMarkdown>
                                 <span className={`absolute bottom-0 ${message.sender === 'system' ? '-left-1 bg-blue-100' : '-right-1 bg-green-100'} w-3 h-3 transform rotate-45`}></span>
                             </div>
@@ -45,7 +45,7 @@ const ChatWindow = ({ messages, onOptionClick }) => {
                             )}
                         </div>
                         {message.sender === 'user' && (
-                            <Avatar className="ml-2">
+                            <Avatar className="ml-2 hidden md:block">
                                 <AvatarImage src="https://github.com/shadcn.png" alt="User Avatar" />
                                 <AvatarFallback>UA</AvatarFallback>
                             </Avatar>

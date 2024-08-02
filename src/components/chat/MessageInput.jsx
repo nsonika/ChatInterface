@@ -14,7 +14,7 @@ const MessageInput = ({ onSend }) => {
     };
 
     return (
-        <div className="flex items-center p-4 bg-white border-t border-gray-200">
+        <div className="flex items-center p-4 bg-white border-t border-gray-200 bg-gray-100">
             <Avatar className="mr-4">
                 <AvatarImage src="https://github.com/shadcn.png" />
                 <AvatarFallback>CN</AvatarFallback>

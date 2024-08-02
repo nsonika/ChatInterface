@@ -21,7 +21,7 @@ const ChatContainer = () => {
                     options = ['Agriculture solutions', 'Other services'];
                     break;
                 case 'get started':
-                    responseText = 'To get started with our tools, visit our [**sign-up page**](https://nucleus.ai/sign-up) for a demo or contact our sales team. Would you like to see more information or contact options?';
+                    responseText = 'To get started with our tools, visit our [**sign-up page**](https://www.withnucleus/sign-up) for a demo or contact our sales team. Would you like to see more information or contact options?';
                     options = ['Sign-up page', 'Contact options'];
                     break;
                 case 'agriculture solutions':
@@ -33,7 +33,7 @@ const ChatContainer = () => {
                     options = [];
                     break;
                 case 'sign-up page':
-                    responseText = 'You can sign up for a demo by visiting [**this link**](https://nucleus.ai/sign-up).';
+                    responseText = 'You can sign up for a demo by visiting [**this link**](https://www.withnucleus.ai/sign-up).';
                     options = [];
                     break;
                 case 'contact options':

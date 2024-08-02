@@ -12,15 +12,15 @@ const ChatWindow = ({ messages, onOptionClick }) => {
     }, [messages]);
 
     return (
-        <div className="flex-1 overflow-auto p-4 bg-gray-100 h-[80vh] w-full max-w-2xl rounded-sm">
+        <div className="flex-1 overflow-auto p-4 bg-gray-100 h-[80vh] w-full max-w-2xl">
             <div className="flex flex-col">
                 {messages.map((message) => (
                     <div
                         key={message.id}
-                        className={`flex mb-2 ${message.sender === 'user' ? 'justify-end' : 'justify-start'} md:mb-4`}
+                        className={`flex mb-2 ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                     >
                         {message.sender === 'system' && (
-                            <Avatar className="mr-2 hidden md:block">
+                            <Avatar className="mr-2">
                                 <AvatarImage src={nucleus} alt="System Avatar" />
                                 <AvatarFallback>SA</AvatarFallback>
                             </Avatar>
@@ -45,7 +45,7 @@ const ChatWindow = ({ messages, onOptionClick }) => {
                             )}
                         </div>
                         {message.sender === 'user' && (
-                            <Avatar className="ml-2 hidden md:block">
+                            <Avatar className="ml-2">
                                 <AvatarImage src="https://github.com/shadcn.png" alt="User Avatar" />
                                 <AvatarFallback>UA</AvatarFallback>
                             </Avatar>

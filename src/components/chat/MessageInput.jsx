@@ -14,7 +14,7 @@ const MessageInput = ({ onSend }) => {
     };
 
     return (
-        <div className="flex items-center p-4 bg-white border-t border-gray-200 bg-gray-100">
+        <div className="flex items-center p-4 border-t bg-gray-100">
             <Avatar className="mr-4">
                 <AvatarImage src="https://github.com/shadcn.png" />
                 <AvatarFallback>CN</AvatarFallback>
@@ -23,7 +23,7 @@ const MessageInput = ({ onSend }) => {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Type a message..."
-                className="flex-1 mr-4"
+                className="flex-1 mr-4 "
             />
             <Button onClick={handleSend} className="text-white">Send</Button>
         </div>

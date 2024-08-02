@@ -17,23 +17,23 @@ const ChatContainer = () => {
 
             switch (text.toLowerCase()) {
                 case 'learn about services':
-                    responseText = 'We offer advanced AI solutions for various industries, including agriculture, finance, and technology. Is there something specific you would like to know more about?';
+                    responseText = 'We offer advanced AI solutions for various industries, including **agriculture**, **finance**, and **technology**. Is there something specific you would like to know more about?';
                     options = ['Agriculture solutions', 'Other services'];
                     break;
                 case 'get started':
-                    responseText = 'To get started with our tools, visit our [sign-up page](https://nucleus.ai/sign-up) for a demo or contact our sales team. Would you like to see more information or contact options?';
+                    responseText = 'To get started with our tools, visit our [**sign-up page**](https://nucleus.ai/sign-up) for a demo or contact our sales team. Would you like to see more information or contact options?';
                     options = ['Sign-up page', 'Contact options'];
                     break;
                 case 'agriculture solutions':
-                    responseText = 'Our agriculture solutions optimize farming practices with AI to improve productivity and manage resources efficiently. Would you like more details or to set up a demo?';
+                    responseText = 'Our agriculture solutions optimize farming practices with AI to improve productivity and manage resources efficiently. Would you like **more details** or to **set up a demo**?';
                     options = ['More details', 'Set up a demo'];
                     break;
                 case 'other services':
-                    responseText = 'We offer AI solutions in various areas like finance and technology. Let me know if you want more details about any specific service.';
+                    responseText = 'We offer AI solutions in various areas like **finance** and **technology**. Let me know if you want more details about any specific service.';
                     options = [];
                     break;
                 case 'sign-up page':
-                    responseText = 'You can sign up for a demo by visiting [this link](https://nucleus.ai/sign-up).';
+                    responseText = 'You can sign up for a demo by visiting [**this link**](https://nucleus.ai/sign-up).';
                     options = [];
                     break;
                 case 'contact options':
@@ -41,11 +41,11 @@ const ChatContainer = () => {
                     options = [];
                     break;
                 case 'more details':
-                    responseText = 'For more details, please visit our website or contact our support team.';
+                    responseText = 'For more details, please visit our [**website**](https://www.withnucleus.ai/) or contact our support team.';
                     options = [];
                     break;
                 case 'set up a demo':
-                    responseText = 'You can schedule a demo by visiting [our scheduling page](https://nucleus.ai/schedule).';
+                    responseText = 'You can schedule a demo by visiting [**our scheduling page**](https://www.withnucleus.ai/schedule).';
                     options = [];
                     break;
                 default:

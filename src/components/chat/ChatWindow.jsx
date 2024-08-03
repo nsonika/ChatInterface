@@ -8,6 +8,7 @@ const ChatWindow = ({ messages, onOptionClick }) => {
     const endOfMessagesRef = useRef(null);
 
     useEffect(() => {
+        // Scroll to the bottom of the messages list whenever a new message is added
         endOfMessagesRef.current?.scrollIntoView({ behavior: "smooth" });
     }, [messages]);
 

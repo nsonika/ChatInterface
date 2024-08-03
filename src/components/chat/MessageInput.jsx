@@ -7,9 +7,10 @@ const MessageInput = ({ onSend }) => {
     const [input, setInput] = useState('');
 
     const handleSend = () => {
+        // Ensure input is not empty before sending
         if (input.trim()) {
             onSend(input);
-            setInput('');
+            setInput('');// Clear the input field after sending the message
         }
     };
 

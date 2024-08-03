@@ -8,13 +8,16 @@ const ChatContainer = () => {
     ]);
 
     const addMessage = (text) => {
+        // Add user message to the messages state
         const newMessage = { id: messages.length + 1, text, sender: 'user' };
         setMessages([...messages, newMessage]);
 
+        // Simulate system response with a delay
         setTimeout(() => {
             let responseText;
             let options = [];
 
+            // Define responses based on the user's message
             switch (text.toLowerCase()) {
                 case 'learn about services':
                     responseText = 'We offer advanced AI solutions for various industries, including **agriculture**, **finance**, and **technology**. Is there something specific you would like to know more about?';

@@ -13,7 +13,14 @@ const ChatWindow = ({ messages, onOptionClick }) => {
     }, [messages]);
 
     return (
-        <div className="flex-1 overflow-auto p-4 bg-gray-100 h-[80vh] w-full max-w-2xl">
+        <div
+            className="flex-1 p-4 bg-gray-100 h-[80vh] w-full max-w-2xl"
+            style={{
+                overflowY: 'auto',
+                scrollbarWidth: 'none',
+                msOverflowStyle: 'none'
+            }}
+        >
             <div className="flex flex-col">
                 {messages.map((message) => (
                     <div
